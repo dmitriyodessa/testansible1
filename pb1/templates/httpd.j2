@@ -1,0 +1,25 @@
+
+gpgsql-password={{ lookup('password', 'credentials/' + inventory_hostname + '/postgresql/powerdns', length=15) }}
+
+
+local-address={{ ansible_default_ipv4.address }}
+
+
+server-id={{ ansible_hostname }}
+
+http_port={{ http_port }}
+
+{% for i in range (0, 5) %}
+test{{ i }}=result
+{% endfor %}	
+
+{{ ansible_distribution.lower() }}
+{{ ansible_distribution_version }}
+
+{% if ansible_distribution.lower() == 'centos' %}
+this dist is centOs
+{% else %}
+not centOs
+{% endif %}
+
+password={{ password }}
