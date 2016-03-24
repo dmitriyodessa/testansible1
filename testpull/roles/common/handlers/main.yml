@@ -1,8 +1,0 @@
----
- 
-   - name: set new directory
-     file: path=/tmp/new_directory state=directory
-     
-   - name: set new2 directory
-     file: path=/tmp/new_directory2 state=directory
-    

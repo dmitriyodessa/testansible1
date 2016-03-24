@@ -1,8 +1,0 @@
----
- 
-  - name: create commonrole directory
-    file: path=/tmp/commonrole state=directory
-    notify:
-      - set new directory
-      
- 
